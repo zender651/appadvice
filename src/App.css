@@ -1,0 +1,119 @@
+#root, html, body {
+  
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(105, 208, 224, 0.2)), url('./image/photo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+.card {
+    background: rgba(127, 250, 211, 0.4);
+    width:40%;
+    height:30%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 0 15px 20px rgb(0, 0, 0,0.2);
+}
+
+.heading {
+
+     /* -webkit-text-fill-color: transparent;
+     -webkit-text-stroke: .01px  #0e141f; */
+     display:flex;
+     color: #232f45;
+     text-shadow:  0 0 16px #237391;
+     align-items: center;
+     height:580px;
+     font-family: 'Titillium Web', sans-serif;
+     font-weight:200%;
+}
+
+.button {
+    position: relative;
+    outline: none;
+    margin-bottom: 20px;
+    text-decoration: none;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 200px;
+    width: 210px;
+    opacity: 1;
+    background-color: rgba(247, 248, 247, 0.2);
+    border: 2px solid rgb(56, 100, 110);
+  }
+.button span {
+    color: #2d3c58;
+    font-size: 14px;
+    font-weight: 1000;
+    letter-spacing: 0.7px;
+  }
+    
+  .button:hover {
+    animation: rotate 0.7s ease-in-out both;
+  }
+    
+  .button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+  }
+    
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+    
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }  
+  
+  @media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 30%;
+    }
+  }
